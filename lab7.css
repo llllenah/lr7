@@ -1,0 +1,56 @@
+/*a*/
+#workLayer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(40% + 10px);
+    height: calc(80% + 50px);
+    background-color: rgba(200, 200, 200, 0.9);
+    z-index: 1000;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+/*c*/
+#controlsArea {
+    width: 100%;
+    height: 50px;
+    background-color: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #999;
+}
+
+#messageArea {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/*b*/
+#animArea {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 80%;
+    border: 5px solid blue;
+    box-sizing: border-box;
+    background-color: #fff;
+    
+    /*e*/
+    background-image: url('tex1.png'), url('tex2.png');
+    background-repeat: repeat, repeat;
+    background-position: top left, bottom left;
+    background-size: 32px 32px, 32px 32px;
+    background-clip: content-box, content-box;
+}
+
+#animCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

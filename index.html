@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комп'ютерний практикум No7</title>
+    <link rel="stylesheet" href="flex-styles.css">
+    <link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="slogan"><h1>Фехтування: Мистецтво бою</h1></div>
+            <div class="text"><p>Тут ви дізнаєтесь про фехтування</p><p>Приєднуйтесь до нашої спільноти</p></div>
+        </div>
+        
+        <div class="main-content">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Практикум 7</a></li>
+                </ul>
+            </nav>
+            
+            <div class="right-column">
+                <div class="narrow-bar">
+                    <h2>Фехтування – мистецтво і спорт</h2>
+                </div>
+                
+                <div class="content-area">
+                    <div class="content-and-bottom">
+                        <div class="content">
+                            <h2>Ласкаво просимо!</h2>
+                            <p>Натисніть "Play" для запуску анімації (Практикум 7).</p>
+                            
+                            <button id="playBtn">Play</button>
+                            
+                            <div id="resultsContainer" style="margin-top: 20px;">
+                                </div>
+
+                            </div>
+                        
+                        <div class="bottom-bar"><h2>Приєднуйтесь до тренувань!</h2></div>
+                    </div>
+                    
+                    <div class="right-sidebar">
+                        <p><strong>Основні види зброї:</strong></p>
+                        <ul><li>Шпага</li><li>Рапіра</li><li>Шабля</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="slogan"><h2>Честь і майстерність</h2></div>
+            <div class="text"><p>Фехтування – це шлях до досконалості</p></div>
+        </div>
+    </div>
+
+    <div id="workLayer">
+        <div id="controlsArea">
+            <button id="closeBtn">Close</button>
+            <span id="messageArea">Тут будуть повідомлення...</span>
+            <div id="startReloadContainer">
+                <button id="startBtn">Start</button>
+            </div>
+        </div>
+        
+        <div id="animArea">
+            <canvas id="animCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="lab7.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.main-content {
+    display: flex;
+    gap: 10px;
+    min-height: 400px;
+}
+
+.menu {
+    background: #2196F3;
+    color: white;
+    padding: 15px;
+    width: 200px;
+    min-width: 160px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    color: white;
+    padding: 5px;
+    display: block;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.narrow-bar {
+    background: #FF9800;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.narrow-bar h2 {
+    margin: 0 0 5px;
+}
+
+.content-area {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.content-and-bottom {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.bottom-bar {
+    background: #FF9800;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.right-sidebar {
+    background: #2196F3;
+    color: white;
+    padding: 15px;
+    width: 180px;
+    min-width: 140px;
+}
+
+.right-sidebar ul {
+    list-style: none;
+}
+
+.right-sidebar li {
+    margin: 5px 0;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h2 {
+    font-size: 18px;
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .menu {
+        width: auto;
+        min-width: auto;
+        order: 1;
+    }
+    
+    .right-column {
+        order: 2;
+    }
+    
+    .content-area {
+        flex-direction: column;
+    }
+    
+    .right-sidebar {
+        width: auto;
+        min-width: auto;
+        order: 2;
+    }
+    
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
