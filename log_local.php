@@ -1,12 +1,10 @@
 <?php
-// (Вимога 2.c)
 header('Content-Type: application/json');
-$logFile = 'local_log.json'; // Окремий файл для акумульованого логу
+$logFile = 'local_log.json';
 
 $jsonArrayData = file_get_contents('php://input');
 
 if ($jsonArrayData) {
-    // Просто зберігаємо весь отриманий масив у файл "як є"
     file_put_contents($logFile, $jsonArrayData, LOCK_EX);
     echo json_encode(['status' => 'success']);
 } else {
