@@ -1,4 +1,4 @@
-/*a*/
+/* Робочий шар поверх сторінки */
 #workLayer {
     display: none;
     position: fixed;
@@ -12,7 +12,7 @@
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
-/*c*/
+/* Панель керування зверху */
 #controlsArea {
     width: 100%;
     height: 50px;
@@ -28,9 +28,28 @@
 #messageArea {
     font-family: monospace;
     font-size: 12px;
+    flex: 1;
+    margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/*b*/
+#closeBtn {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#startReloadContainer {
+    display: flex;
+}
+
+#startBtn, #reloadBtn {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* Область анімації */
 #animArea {
     position: absolute;
     bottom: 0;
@@ -40,17 +59,42 @@
     border: 5px solid blue;
     box-sizing: border-box;
     background-color: #fff;
-    
-    /*e*/
-    background-image: url('tex1.png'), url('tex2.png');
-    background-repeat: repeat, repeat;
-    background-position: top left, bottom left;
-    background-size: 32px 32px, 32px 32px;
-    background-clip: content-box, content-box;
+    overflow: hidden;
+}
+
+/* Фонові текстури */
+#animArea::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url('tex1.png');
+    background-repeat: repeat;
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#animArea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url('tex2.png');
+    background-repeat: repeat;
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 #animCanvas {
+    position: relative;
     width: 100%;
     height: 100%;
     display: block;
+    z-index: 2;
 }
